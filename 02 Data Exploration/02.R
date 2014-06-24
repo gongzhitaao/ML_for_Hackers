@@ -1,5 +1,3 @@
-#!/usr/bin/env Rscript
-
 library(ggplot2)
 
 data.file <- file.path("data", "01_heights_weights_genders.csv")
