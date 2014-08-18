@@ -176,8 +176,8 @@ summary(hardham.res)
 
 ## Test against all mails
 spam.classifier <- function(path) {
-  pr.spam <- classify.email(path, spam.tf)
-  pr.ham <- classify.email(path, easyham.tf)
+  pr.spam <- classify.email(path, spam.tf, prior=0.2)
+  pr.ham <- classify.email(path, easyham.tf, prior=0.8)
   return(c(pr.spam, pr.ham, ifelse(pr.spam > pr.ham, 1, 0)))
 }
 
